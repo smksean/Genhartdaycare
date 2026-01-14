@@ -1,100 +1,59 @@
 import { motion } from "framer-motion";
-import { Heart, Target, Eye, Users, Award, BookOpen } from "lucide-react";
+import { Heart, Users, Award, BookOpen } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import aboutImage from "@/assets/about-reading.jpg";
 import heroImage from "@/assets/hero-daycare.jpg";
-
-const values = [
-  {
-    icon: Heart,
-    title: "Love & Care",
-    description: "Every child is treated with unconditional love and warmth.",
-    color: "text-brand-red",
-    bgColor: "bg-brand-red/10",
-  },
-  {
-    icon: Users,
-    title: "Family Partnership",
-    description: "We work closely with parents to support each child's growth.",
-    color: "text-brand-blue",
-    bgColor: "bg-brand-blue/10",
-  },
-  {
-    icon: Award,
-    title: "Excellence",
-    description: "We strive for the highest standards in childcare and education.",
-    color: "text-brand-yellow",
-    bgColor: "bg-brand-yellow/10",
-  },
-  {
-    icon: BookOpen,
-    title: "Holistic Development",
-    description: "We nurture the whole child—mind, body, and spirit.",
-    color: "text-brand-green",
-    bgColor: "bg-brand-green/10",
-  },
-];
-
-const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.5 },
-};
 
 export default function About() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-b from-brand-blue/10 to-background">
+      <section className="relative py-14 bg-gradient-to-b from-brand-blue/8 to-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center max-w-3xl mx-auto"
+            className="max-w-3xl mx-auto"
           >
-            <span className="inline-block px-4 py-2 bg-brand-blue/10 text-brand-blue rounded-full text-sm font-semibold mb-4">
-              About Us
-            </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-5 leading-tight">
               Where <span className="text-brand-red">Little Hearts</span> Grow
             </h1>
-            <p className="text-lg text-muted-foreground">
-              At Genhart Daycare, we believe that every child deserves a safe, loving, and 
-              nurturing environment—a true home away from home.
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              We're a family-run daycare in Benin City, providing loving care for infants and 
+              toddlers since 2018. Every child who comes through our doors is treated like our own.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* About Content */}
-      <section className="py-20">
+      <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="space-y-6"
+              className="space-y-5"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Our <span className="text-brand-green">Story</span>
+                Our Story
               </h2>
-              <p className="text-muted-foreground">
-                Genhart Daycare was founded with a simple yet powerful vision: to create a 
-                space where children can thrive in a loving, family-like atmosphere. We 
-                understand that leaving your child in someone else's care is one of the 
-                biggest decisions a parent can make.
+              <p className="text-muted-foreground leading-relaxed">
+                Genhart Daycare started in 2018 when we saw a need in our community for 
+                genuine, family-centered childcare. We're not a chain or a franchise—we're 
+                a local daycare run by people who live here and care deeply about Benin City 
+                families.
               </p>
-              <p className="text-muted-foreground">
-                That's why we've designed our daycare to be more than just a childcare 
-                facility—we're an extension of your family. Our experienced caregivers 
-                treat every child as their own, providing the warmth, attention, and 
-                encouragement that helps little ones flourish.
+              <p className="text-muted-foreground leading-relaxed">
+                We understand that leaving your child in someone else's care is one of the 
+                biggest decisions you'll make. That's why we've built our daycare to feel 
+                like home—with warm, experienced caregivers who treat every child as their own.
               </p>
-              <p className="text-muted-foreground">
-                Located in the heart of Benin City, Nigeria, we serve families in our 
-                community who are looking for quality, trustworthy care for their infants 
-                and toddlers.
+              <p className="text-muted-foreground leading-relaxed">
+                Our facility is located in a safe, residential area with indoor and outdoor 
+                play spaces designed for little ones. We serve working parents who need 
+                reliable, loving care during the day, from morning drop-off to evening pickup.
               </p>
             </motion.div>
 
@@ -103,7 +62,7 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="relative rounded-3xl overflow-hidden shadow-card">
+              <div className="relative rounded-2xl overflow-hidden border border-secondary">
                 <img
                   src={aboutImage}
                   alt="Reading time at Genhart Daycare"
@@ -115,120 +74,170 @@ export default function About() {
         </div>
       </section>
 
-      {/* Vision & Mission */}
-      <section className="py-20 bg-secondary/50">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="bg-card p-8 rounded-3xl shadow-soft"
-            >
-              <div className="w-16 h-16 bg-brand-blue/10 rounded-2xl flex items-center justify-center mb-6">
-                <Eye className="h-8 w-8 text-brand-blue" />
-              </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
-              <p className="text-muted-foreground">
-                At Genhart Daycare, our vision is to create a safe, caring, and family-like 
-                environment where every child feels at home while learning through play and 
-                discovery. We envision a community where children are confident, curious, 
-                and joyful learners.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="bg-card p-8 rounded-3xl shadow-soft"
-            >
-              <div className="w-16 h-16 bg-brand-red/10 rounded-2xl flex items-center justify-center mb-6">
-                <Target className="h-8 w-8 text-brand-red" />
-              </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
-              <p className="text-muted-foreground">
-                Our mission is to provide a nurturing home away from home where toddlers and 
-                preschoolers can grow with confidence, curiosity, and joy. Through a blend of 
-                Montessori principles and play-based learning, we support each child's unique 
-                development while building strong connections with families and our community.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Values */}
-      <section className="py-20">
+      {/* What We Believe */}
+      <section className="py-14 bg-secondary/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our <span className="text-brand-orange">Values</span>
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              These core values guide everything we do at Genhart Daycare
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-card p-6 rounded-2xl shadow-soft text-center hover:shadow-card transition-shadow"
-              >
-                <div className={`w-14 h-14 ${value.bgColor} rounded-xl flex items-center justify-center mb-4 mx-auto`}>
-                  <value.icon className={`h-7 w-7 ${value.color}`} />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">{value.title}</h3>
-                <p className="text-muted-foreground text-sm">{value.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Image */}
-      <section className="py-20 bg-gradient-to-b from-background to-brand-yellow/5">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our <span className="text-brand-blue">Caring Team</span>
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Our dedicated team of caregivers and educators are passionate about nurturing 
-              young minds and hearts.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-card">
-              <img
-                src={heroImage}
-                alt="Our caring team at Genhart Daycare"
-                className="w-full h-auto object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/30 to-transparent" />
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
+              What We Believe
+            </h2>
+            
+            <div className="space-y-6">
+              <div className="border-l-4 border-brand-blue/30 pl-6 py-2">
+                <p className="text-muted-foreground leading-relaxed">
+                  We believe every child deserves to feel safe, loved, and confident while their 
+                  parents are at work. Our goal is simple: to create a space where children can 
+                  play, learn, and grow naturally—the way children are meant to.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-brand-red/30 pl-6 py-2">
+                <p className="text-muted-foreground leading-relaxed">
+                  We use Montessori-inspired methods because we've seen how well they work. 
+                  Children learn best through hands-on play, exploration, and following their 
+                  natural curiosity. We don't rush development—we support each child at their 
+                  own pace.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-brand-green/30 pl-6 py-2">
+                <p className="text-muted-foreground leading-relaxed">
+                  Most importantly, we believe in partnering with parents. You know your child 
+                  best, and we work with you—sharing updates, listening to concerns, and making 
+                  sure your child's needs are met every single day.
+                </p>
+              </div>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* What Guides Us */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+              What Guides Us Daily
+            </h2>
+            <p className="text-muted-foreground mb-8 leading-relaxed">
+              Here's what we focus on every day at Genhart Daycare:
+            </p>
+
+            <div className="space-y-5">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="flex gap-3"
+              >
+                <Heart className="h-5 w-5 text-brand-red/70 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-lg font-bold text-foreground mb-1">Love & Care</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    We treat every child with unconditional love and warmth. Your child will 
+                    never feel like "just another kid" here—they're part of our family.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="flex gap-3"
+              >
+                <Users className="h-5 w-5 text-brand-blue/70 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-lg font-bold text-foreground mb-1">Partnership with Parents</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    We work closely with you to support your child's growth. Daily updates, 
+                    open communication, and your input are always welcome.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="flex gap-3"
+              >
+                <BookOpen className="h-5 w-5 text-brand-green/70 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-lg font-bold text-foreground mb-1">Whole-Child Development</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    We nurture not just learning, but emotional, social, and physical growth too. 
+                    Children need to develop in all areas, not just academics.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="flex gap-3"
+              >
+                <Award className="h-5 w-5 text-brand-yellow/70 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-lg font-bold text-foreground mb-1">Quality Care</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    We maintain high standards in everything—from staff training to facility 
+                    cleanliness to the meals we serve. Your trust matters to us.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Our Team */}
+      <section className="py-14 bg-gradient-to-b from-background to-brand-yellow/5">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+              Our Caring Team
+            </h2>
+            <p className="text-muted-foreground mb-8 leading-relaxed">
+              Our caregivers are trained, experienced, and passionate about working with young 
+              children. More importantly, they're patient, warm, and genuinely love what they do. 
+              All staff are carefully screened and trained in first aid, child safety, and early 
+              childhood development.
+            </p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              <div className="relative rounded-2xl overflow-hidden border border-secondary">
+                <img
+                  src={heroImage}
+                  alt="Our caring team at Genhart Daycare"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>

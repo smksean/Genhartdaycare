@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Clock, MessageCircle, Send, Heart } from "lucide-react";
+import { MapPin, Phone, Clock, MessageCircle, Send } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -32,31 +32,28 @@ export default function Contact() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-b from-brand-orange/10 to-background">
+      <section className="relative py-14 bg-gradient-to-b from-brand-orange/8 to-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center max-w-3xl mx-auto"
+            className="max-w-3xl mx-auto"
           >
-            <span className="inline-block px-4 py-2 bg-brand-orange/10 text-brand-orange rounded-full text-sm font-semibold mb-4">
-              Contact Us
-            </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Let's <span className="text-brand-orange">Connect</span>
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-5 leading-tight">
+              Get in Touch
             </h1>
-            <p className="text-lg text-muted-foreground">
-              We'd love to hear from you! Reach out to schedule a visit or learn more about 
-              enrolling your child.
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Have questions? Want to schedule a visit? We'd love to hear from you. Call, 
+              WhatsApp, or stop by—we're here to help.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Contact Info + Form */}
-      <section className="py-20">
+      <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-10">
             {/* Contact Information */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -65,51 +62,48 @@ export default function Contact() {
               className="space-y-8"
             >
               <div>
-                <h2 className="text-3xl font-bold text-foreground mb-6">
-                  Get in <span className="text-brand-blue">Touch</span>
+                <h2 className="text-3xl font-bold text-foreground mb-4">
+                  Contact Information
                 </h2>
-                <p className="text-muted-foreground">
-                  We're here to answer any questions you have about our daycare. 
-                  Feel free to reach out through any of the channels below.
+                <p className="text-muted-foreground leading-relaxed">
+                  Reach us by phone, WhatsApp, or visit us in person. We're happy to answer 
+                  questions or show you around.
                 </p>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-5">
                 {/* Address */}
-                <div className="flex items-start gap-4 p-4 bg-card rounded-2xl shadow-soft">
-                  <div className="w-12 h-12 bg-brand-red/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <MapPin className="h-6 w-6 text-brand-red" />
-                  </div>
+                <div className="flex items-start gap-3">
+                  <MapPin className="h-5 w-5 text-brand-red/70 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Our Location</h3>
-                    <p className="text-muted-foreground">
+                    <h3 className="font-bold text-foreground mb-1">Our Location</h3>
+                    <p className="text-muted-foreground text-sm">
                       No. 7, Irumekha Street<br />
-                      Benin City, Nigeria
+                      Benin City, Edo State, Nigeria
                     </p>
                   </div>
                 </div>
 
                 {/* Phone */}
-                <div className="flex items-start gap-4 p-4 bg-card rounded-2xl shadow-soft">
-                  <div className="w-12 h-12 bg-brand-green/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Phone className="h-6 w-6 text-brand-green" />
-                  </div>
+                <div className="flex items-start gap-3">
+                  <Phone className="h-5 w-5 text-brand-green/70 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Phone & WhatsApp</h3>
-                    <a href="tel:08034535648" className="text-brand-blue hover:underline">
+                    <h3 className="font-bold text-foreground mb-1">Phone & WhatsApp</h3>
+                    <a href="tel:08034535648" className="text-brand-blue hover:underline text-sm">
                       08034535648
                     </a>
+                    <p className="text-muted-foreground text-xs mt-1">
+                      (Call or WhatsApp for quick response)
+                    </p>
                   </div>
                 </div>
 
                 {/* Hours */}
-                <div className="flex items-start gap-4 p-4 bg-card rounded-2xl shadow-soft">
-                  <div className="w-12 h-12 bg-brand-yellow/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Clock className="h-6 w-6 text-brand-yellow" />
-                  </div>
+                <div className="flex items-start gap-3">
+                  <Clock className="h-5 w-5 text-brand-yellow/70 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Operating Hours</h3>
-                    <p className="text-muted-foreground">
+                    <h3 className="font-bold text-foreground mb-1">Operating Hours</h3>
+                    <p className="text-muted-foreground text-sm">
                       Monday - Friday: 7:00 AM - 6:00 PM<br />
                       Saturday: 8:00 AM - 2:00 PM<br />
                       Sunday: Closed
@@ -118,14 +112,10 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* WhatsApp CTA */}
-              <div className="bg-brand-green/10 p-6 rounded-2xl">
-                <div className="flex items-center gap-3 mb-4">
-                  <MessageCircle className="h-6 w-6 text-brand-green" />
-                  <h3 className="text-xl font-bold text-foreground">Quick WhatsApp</h3>
-                </div>
-                <p className="text-muted-foreground mb-4">
-                  For a faster response, send us a WhatsApp message!
+              {/* WhatsApp Quick Action */}
+              <div className="pt-4 border-t border-border">
+                <p className="text-sm text-muted-foreground mb-3">
+                  For the fastest response, send us a message on WhatsApp:
                 </p>
                 <Button variant="success" size="lg" asChild>
                   <a href="https://wa.me/2348034535648" target="_blank" rel="noopener noreferrer">
@@ -142,11 +132,14 @@ export default function Contact() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="bg-card p-8 rounded-3xl shadow-card">
-                <h2 className="text-2xl font-bold text-foreground mb-6">
+              <div className="bg-card/50 border border-border p-6 rounded-2xl">
+                <h2 className="text-2xl font-bold text-foreground mb-2">
                   Send Us a Message
                 </h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <p className="text-muted-foreground text-sm mb-6">
+                  Fill out the form below and we'll get back to you soon.
+                </p>
+                <form onSubmit={handleSubmit} className="space-y-5">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                       Your Name
@@ -158,7 +151,7 @@ export default function Contact() {
                       onChange={handleChange}
                       placeholder="Enter your name"
                       required
-                      className="rounded-xl"
+                      className="rounded-lg"
                     />
                   </div>
 
@@ -174,7 +167,7 @@ export default function Contact() {
                       onChange={handleChange}
                       placeholder="Enter your email"
                       required
-                      className="rounded-xl"
+                      className="rounded-lg"
                     />
                   </div>
 
@@ -190,7 +183,7 @@ export default function Contact() {
                       onChange={handleChange}
                       placeholder="Enter your phone number"
                       required
-                      className="rounded-xl"
+                      className="rounded-lg"
                     />
                   </div>
 
@@ -206,7 +199,7 @@ export default function Contact() {
                       placeholder="Tell us about your child and any questions you have..."
                       rows={4}
                       required
-                      className="rounded-xl resize-none"
+                      className="rounded-lg resize-none"
                     />
                   </div>
 
@@ -221,73 +214,57 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Map Placeholder */}
-      <section className="py-20 bg-secondary/50">
+      {/* Directions */}
+      <section className="py-14 bg-secondary/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-8"
+            className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              Find <span className="text-brand-blue">Us</span>
+            <h2 className="text-3xl font-bold text-foreground mb-3">
+              Visit Us
             </h2>
-            <p className="text-muted-foreground">
-              Located in the heart of Benin City, Nigeria
+            <p className="text-muted-foreground mb-6 leading-relaxed">
+              We're located at No. 7, Irumekha Street in Benin City. Parents are welcome 
+              to visit anytime during operating hours—no appointment needed.
             </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="bg-card rounded-3xl shadow-soft p-8 text-center">
-              <MapPin className="h-16 w-16 text-brand-red mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-foreground mb-2">
-                No. 7, Irumekha Street
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                Benin City, Edo State, Nigeria
-              </p>
-              <Button variant="default" size="lg" asChild>
-                <a 
-                  href="https://www.google.com/maps/search/No.+7,+Irumekha+Street,+Benin+City,+Nigeria" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  <MapPin className="h-5 w-5" />
-                  Get Directions
-                </a>
-              </Button>
-            </div>
+            <Button variant="default" size="lg" asChild>
+              <a 
+                href="https://www.google.com/maps/search/No.+7,+Irumekha+Street,+Benin+City,+Nigeria" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <MapPin className="h-5 w-5" />
+                Get Directions on Google Maps
+              </a>
+            </Button>
           </motion.div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-brand-orange">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-16 bg-brand-orange/95">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-2xl mx-auto space-y-6"
+            className="max-w-2xl mx-auto text-center space-y-5"
           >
-            <Heart className="h-16 w-16 text-primary-foreground mx-auto animate-bounce-gentle" />
             <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground">
-              We Can't Wait to Meet You!
+              Ready to Visit?
             </h2>
-            <p className="text-primary-foreground/80 text-lg">
-              Schedule a visit today and see why families love Genhart Daycare.
+            <p className="text-primary-foreground/90 text-lg leading-relaxed">
+              Come see our facility, meet our caregivers, and get a feel for what makes 
+              Genhart Daycare special. Give us a call to chat or just stop by.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
               <Button variant="playful" size="lg" asChild>
                 <a href="tel:08034535648">
                   <Phone className="h-5 w-5" />
-                  Call Now: 08034535648
+                  Call: 08034535648
                 </a>
               </Button>
             </div>

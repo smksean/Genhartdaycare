@@ -65,21 +65,21 @@ export default function Safety() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-b from-brand-red/10 to-background">
+      <section className="relative py-16 bg-gradient-to-b from-brand-red/8 to-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <span className="inline-block px-4 py-2 bg-brand-red/10 text-brand-red rounded-full text-sm font-semibold mb-4">
+            <span className="inline-block px-4 py-2 bg-brand-red/10 text-brand-red/90 rounded-full text-sm font-semibold mb-5">
               <Shield className="inline h-4 w-4 mr-1" />
               Safety & Care
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-5 leading-tight">
               Your Child's <span className="text-brand-red">Safety</span> is Our Priority
             </h1>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-muted-foreground leading-relaxed">
               At Genhart Daycare, we maintain the highest standards of safety and hygiene 
               to give you complete peace of mind.
             </p>
@@ -133,46 +133,104 @@ export default function Safety() {
         </div>
       </section>
 
-      {/* Safety Features Grid */}
-      <section className="py-20 bg-secondary/50">
+      {/* Safety Features - Text-Led Layout */}
+      <section className="py-16 bg-secondary/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our <span className="text-brand-blue">Safety Measures</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+              How We Keep Your Child Safe Every Day
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive safety protocols to protect your child every day
+            <p className="text-muted-foreground text-lg mb-12">
+              Safety isn't just a checklist for us—it's woven into everything we do, from morning drop-off to evening pickup.
             </p>
-          </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {safetyFeatures.map((feature, index) => (
+            {/* Main Safety Points - Mixed Layout */}
+            <div className="space-y-8">
+              {/* Secure Facility & Supervision */}
               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="border-l-4 border-brand-blue/40 pl-6 py-2"
+              >
+                <h3 className="text-xl font-bold text-foreground mb-2 flex items-center gap-2">
+                  <Lock className="h-5 w-5 text-brand-blue" />
+                  Secure Facility & Constant Supervision
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Our facility has controlled entry with secure doors and safety gates throughout. 
+                  More importantly, our trained caregivers maintain vigilant supervision at all times—
+                  we never leave children unattended, whether they're playing, eating, or resting.
+                </p>
+              </motion.div>
+
+              {/* Clean Environment & Health */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="border-l-4 border-brand-green/40 pl-6 py-2"
+              >
+                <h3 className="text-xl font-bold text-foreground mb-2 flex items-center gap-2">
+                  <Sparkles className="h-5 w-5 text-brand-green" />
+                  Cleanliness & Health Monitoring
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  We sanitize toys, surfaces, and play areas multiple times daily. Each child receives 
+                  daily health checks, and we carefully monitor their wellbeing throughout the day. 
+                  If a child seems unwell, we notify parents immediately.
+                </p>
+              </motion.div>
+
+              {/* Trained Staff & Emergency Prep */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="border-l-4 border-brand-orange/40 pl-6 py-2"
+              >
+                <h3 className="text-xl font-bold text-foreground mb-2 flex items-center gap-2">
+                  <Users className="h-5 w-5 text-brand-orange" />
+                  Trained Staff & Emergency Readiness
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  All our caregivers are trained in first aid and child safety protocols. We conduct 
+                  regular fire drills, maintain strict pickup authorization procedures, and have 
+                  emergency contact protocols ready at all times.
+                </p>
+              </motion.div>
+
+              {/* Meals - Small Accent Card */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-card p-6 rounded-2xl shadow-soft hover:shadow-card transition-shadow"
+                transition={{ delay: 0.3 }}
+                className="bg-brand-yellow/5 border border-brand-yellow/20 rounded-lg p-5 ml-6"
               >
-                <div className={`w-14 h-14 ${feature.bgColor} rounded-xl flex items-center justify-center mb-4`}>
-                  <feature.icon className={`h-7 w-7 ${feature.color}`} />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
+                <h3 className="text-lg font-bold text-foreground mb-1 flex items-center gap-2">
+                  <Utensils className="h-4 w-4 text-brand-yellow" />
+                  Healthy Meals
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  We prepare nutritious, age-appropriate meals and snacks fresh daily, following 
+                  proper food safety standards.
+                </p>
               </motion.div>
-            ))}
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Safety Checklist */}
-      <section className="py-20">
+      {/* Safety Checklist - No Card */}
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -180,77 +238,81 @@ export default function Safety() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-8">
-              Safety <span className="text-brand-green">Checklist</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+              Additional Safety Standards
             </h2>
+            <p className="text-muted-foreground mb-8">
+              Here are some of the other ways we ensure your child's safety and comfort:
+            </p>
 
-            <div className="bg-card rounded-3xl shadow-soft p-8">
-              <ul className="space-y-4">
-                {safetyChecklist.map((item, index) => (
-                  <motion.li
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.05 }}
-                    className="flex items-start gap-3"
-                  >
-                    <CheckCircle className="h-6 w-6 text-brand-green flex-shrink-0 mt-0.5" />
-                    <span className="text-foreground">{item}</span>
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
+            <ul className="space-y-3">
+              {safetyChecklist.map((item, index) => (
+                <motion.li
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.05 }}
+                  className="flex items-start gap-3 py-1"
+                >
+                  <CheckCircle className="h-5 w-5 text-brand-green flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground/90">{item}</span>
+                </motion.li>
+              ))}
+            </ul>
           </motion.div>
         </div>
       </section>
 
-      {/* Parent Promise */}
-      <section className="py-20 bg-gradient-to-b from-brand-yellow/5 to-background">
+      {/* Parent Promise - More Personal */}
+      <section className="py-14 bg-gradient-to-b from-brand-yellow/5 to-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto text-center"
+            className="max-w-3xl mx-auto"
           >
-            <Heart className="h-16 w-16 text-brand-red mx-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Our Promise to Parents
+            <Heart className="h-12 w-12 text-brand-red/70 mb-5" />
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Promise to You
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-muted-foreground mb-5 leading-relaxed">
               We promise to treat your child as our own, providing the same love, care, and 
               attention we would give to our own family. Your trust means everything to us, 
               and we work every day to earn it.
             </p>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground leading-relaxed">
               We maintain open communication with regular updates on your child's day, 
               immediate notification of any concerns, and an open-door policy for parent 
-              visits.
+              visits. You're always welcome to stop by and see how your child is doing.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-brand-red">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-16 bg-brand-red/95">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-2xl mx-auto space-y-6"
+            className="max-w-2xl mx-auto text-center space-y-5"
           >
-            <Shield className="h-16 w-16 text-primary-foreground mx-auto" />
             <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground">
-              Visit Us Today
+              Come See for Yourself
             </h2>
-            <p className="text-primary-foreground/80 text-lg">
-              We invite you to tour our facility and see our safety measures firsthand.
+            <p className="text-primary-foreground/90 text-lg leading-relaxed">
+              We know that reading about safety is one thing—seeing it in person is another. 
+              We invite you to tour our facility and meet our caregivers. See how we keep 
+              children safe and happy every day.
             </p>
-            <Button variant="playful" size="lg" asChild>
-              <Link to="/contact">Schedule a Visit</Link>
-            </Button>
+            <div className="pt-2">
+              <Button variant="playful" size="lg" asChild>
+                <Link to="/contact">Schedule a Visit</Link>
+              </Button>
+            </div>
           </motion.div>
         </div>
       </section>
