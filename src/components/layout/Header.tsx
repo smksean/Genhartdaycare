@@ -45,7 +45,7 @@ export const Header = () => {
         {/* CTA Button & Mobile Menu */}
         <div className="flex items-center gap-4">
           <Button variant="cta" size="lg" className="hidden md:flex" asChild>
-            <a href="tel:08034535648">
+            <a href="tel:08034957056">
               <Phone className="h-4 w-4" />
               Contact Us
             </a>
@@ -87,7 +87,7 @@ export const Header = () => {
                 </Link>
               ))}
               <Button variant="cta" size="lg" className="mt-2" asChild>
-                <a href="tel:08034535648">
+                <a href="tel:08034957056">
                   <Phone className="h-4 w-4" />
                   Contact Us
                 </a>

@@ -58,6 +58,10 @@ export default {
           green: "hsl(var(--brand-green))",
           orange: "hsl(var(--brand-orange))",
         },
+        whatsapp: {
+          DEFAULT: "hsl(var(--whatsapp-green))",
+          foreground: "#ffffff",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

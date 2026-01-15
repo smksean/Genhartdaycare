@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Heart, Shield, Users, BookOpen, ArrowRight, Phone } from "lucide-react";
+import { Heart, Shield, Users, BookOpen, ArrowRight, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import heroImage from "@/assets/hero-daycare.jpg";
@@ -43,7 +43,7 @@ export default function Home() {
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
                 We provide a safe, caring, and family-like environment where every child 
-                feels at home while learning through play and discovery. From 6 months to 5 years.
+                feels at home while learning through play and discovery. From 9 months to 3 years.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <Button variant="cta" size="lg" asChild>
@@ -287,12 +287,12 @@ export default function Home() {
                 </Link>
               </Button>
               <Button 
-                variant="outline" 
                 size="lg" 
-                className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                className="bg-whatsapp hover:bg-whatsapp/90 text-white border-0"
                 asChild
               >
-                <a href="https://wa.me/2348034535648" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/2348034957056" target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="h-5 w-5" />
                   WhatsApp Us
                 </a>
               </Button>

@@ -37,7 +37,7 @@ export default function Program() {
               Our Programs for Infants & Toddlers
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We serve children from 6 months to 5 years, with programs designed for each 
+              We serve children from 9 months to 3 years, with programs designed for each 
               stage of development. Our approach blends Montessori-inspired learning with 
               plenty of play, exploration, and care.
             </p>
@@ -59,7 +59,7 @@ export default function Program() {
                 <Baby className="h-6 w-6 text-brand-red/70" />
                 <h2 className="text-3xl font-bold text-foreground">Infant Care</h2>
               </div>
-              <p className="text-lg text-brand-red/90 font-medium">Ages 6-12 months</p>
+              <p className="text-lg text-brand-red/90 font-medium">Ages 9 months - 1 year</p>
               <p className="text-muted-foreground leading-relaxed">
                 Our infant program provides a warm, nurturing environment where your baby 
                 receives personalized attention and care. We follow each baby's individual 
@@ -125,7 +125,7 @@ export default function Program() {
                 <Sparkles className="h-6 w-6 text-brand-green/70" />
                 <h2 className="text-3xl font-bold text-foreground">Toddler & Preschool</h2>
               </div>
-              <p className="text-lg text-brand-green/90 font-medium">Ages 1-5 years</p>
+              <p className="text-lg text-brand-green/90 font-medium">Ages 1-3 years</p>
               <p className="text-muted-foreground leading-relaxed">
                 This is where the real fun begins! Toddlers and preschoolers are naturally 
                 curious, and our program is designed to channel that energy into learning. 

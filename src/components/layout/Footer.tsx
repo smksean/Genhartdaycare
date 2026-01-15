@@ -37,9 +37,14 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Phone className="h-5 w-5 text-brand-green flex-shrink-0" />
-                <a href="tel:08034535648" className="hover:text-primary transition-colors">
-                  08034535648
-                </a>
+                <div className="flex flex-col">
+                  <a href="tel:08034957056" className="hover:text-primary transition-colors">
+                    08034957056
+                  </a>
+                  <a href="tel:08033298085" className="hover:text-primary transition-colors">
+                    08033298085
+                  </a>
+                </div>
               </li>
             </ul>
           </div>
@@ -48,9 +53,7 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-bold text-foreground mb-4">Hours</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li>Monday - Friday: 7:00 AM - 6:00 PM</li>
-              <li>Saturday: 8:00 AM - 2:00 PM</li>
-              <li>Sunday: Closed</li>
+              <li>Monday - Friday<br />7:00 AM - 5:00 PM</li>
             </ul>
           </div>
         </div>

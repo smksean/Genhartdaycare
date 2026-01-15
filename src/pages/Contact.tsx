@@ -87,28 +87,29 @@ export default function Contact() {
                 {/* Phone */}
                 <div className="flex items-start gap-3">
                   <Phone className="h-5 w-5 text-brand-green/70 flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-bold text-foreground mb-1">Phone & WhatsApp</h3>
-                    <a href="tel:08034535648" className="text-brand-blue hover:underline text-sm">
-                      08034535648
-                    </a>
-                    <p className="text-muted-foreground text-xs mt-1">
-                      (Call or WhatsApp for quick response)
-                    </p>
-                  </div>
+                <div>
+                  <h3 className="font-bold text-foreground mb-1">Phone & WhatsApp</h3>
+                  <a href="tel:08034957056" className="text-brand-blue hover:underline text-sm block">
+                    08034957056
+                  </a>
+                  <a href="tel:08033298085" className="text-brand-blue hover:underline text-sm block">
+                    08033298085
+                  </a>
+                  <p className="text-muted-foreground text-xs mt-1">
+                    (Call or WhatsApp for quick response)
+                  </p>
+                </div>
                 </div>
 
                 {/* Hours */}
                 <div className="flex items-start gap-3">
                   <Clock className="h-5 w-5 text-brand-yellow/70 flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-bold text-foreground mb-1">Operating Hours</h3>
-                    <p className="text-muted-foreground text-sm">
-                      Monday - Friday: 7:00 AM - 6:00 PM<br />
-                      Saturday: 8:00 AM - 2:00 PM<br />
-                      Sunday: Closed
-                    </p>
-                  </div>
+                <div>
+                  <h3 className="font-bold text-foreground mb-1">Operating Hours</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Monday - Friday: 7:00 AM - 5:00 PM
+                  </p>
+                </div>
                 </div>
               </div>
 
@@ -117,8 +118,8 @@ export default function Contact() {
                 <p className="text-sm text-muted-foreground mb-3">
                   For the fastest response, send us a message on WhatsApp:
                 </p>
-                <Button variant="success" size="lg" asChild>
-                  <a href="https://wa.me/2348034535648" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-whatsapp hover:bg-whatsapp/90 text-white" asChild>
+                  <a href="https://wa.me/2348034957056" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="h-5 w-5" />
                     Chat on WhatsApp
                   </a>
@@ -262,9 +263,9 @@ export default function Contact() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
               <Button variant="playful" size="lg" asChild>
-                <a href="tel:08034535648">
+                <a href="tel:08034957056">
                   <Phone className="h-5 w-5" />
-                  Call: 08034535648
+                  Call: 08034957056
                 </a>
               </Button>
             </div>
