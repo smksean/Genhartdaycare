@@ -222,12 +222,12 @@ export default function Contact() {
             </p>
             <Button variant="default" size="lg" asChild>
               <a
-                href="https://www.google.com/maps/search/No.+7,+Irumekha+Street,+Benin+City,+Nigeria"
+                href="https://www.google.com/maps/dir/?api=1&destination=No.%207%2C%20Irumekha%20Street%2C%20Benin%20City%2C%20Edo%20State%2C%20Nigeria"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <MapPin className="h-5 w-5" />
-                Get Directions on Google Maps
+                Get Directions to No. 7, Irumekha Street
               </a>
             </Button>
           </motion.div>
