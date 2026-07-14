@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Heart, Shield, Users, BookOpen, ArrowRight, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import heroImage from "@/assets/homepage-children-collage.png";
+import heroImage from "@/assets/homepage-kiddies-paradise-hero.png";
 import aboutImage from "@/assets/homepage-learning-care.png";
 
 const testimonials = [
@@ -71,7 +71,7 @@ export default function Home() {
               <div className="relative rounded-2xl overflow-hidden border border-brand-yellow/20">
                 <img
                   src={heroImage}
-                  alt="Smiling children collage for Genhart Daycare Centre"
+                  alt="Genhart Daycare Centre Kiddies Paradise hero banner"
                   className="w-full h-auto object-cover"
                 />
               </div>
