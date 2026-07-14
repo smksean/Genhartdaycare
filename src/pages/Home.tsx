@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { Heart, Shield, Users, BookOpen, ArrowRight, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import heroImage from "@/assets/hero-daycare.jpg";
-import aboutImage from "@/assets/about-reading.jpg";
+import heroImage from "@/assets/homepage-children-collage.png";
+import aboutImage from "@/assets/homepage-learning-care.png";
 
 const testimonials = [
   {
@@ -35,7 +35,7 @@ export default function Home() {
               className="space-y-5"
             >
               <span className="inline-block px-4 py-2 bg-brand-yellow/15 text-brand-orange/90 rounded-full text-sm font-medium">
-                Infant & Toddler Care in Benin City
+                Toddler & Preschool Care in Benin City
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                 A Home Away from Home for{" "}
@@ -43,7 +43,8 @@ export default function Home() {
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
                 We provide a safe, caring, and family-like environment where every child 
-                feels at home while learning through play and discovery. From 9 months to 3 years.
+                feels at home while learning through play and discovery. For children from 
+                9 months to 5 years.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <Button variant="cta" size="lg" asChild>
@@ -70,7 +71,7 @@ export default function Home() {
               <div className="relative rounded-2xl overflow-hidden border border-brand-yellow/20">
                 <img
                   src={heroImage}
-                  alt="Happy children playing at Genhart Daycare"
+                  alt="Smiling children collage for Genhart Daycare Centre"
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -92,7 +93,8 @@ export default function Home() {
               Why Parents Choose Genhart Daycare
             </h2>
             <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
-              Here's what makes us different from other daycare centers in Benin City.
+              Our daily care is guided by the values parents look for most: safety, warmth, 
+              learning, inclusion, and close partnership with families.
             </p>
 
             <div className="space-y-8">
@@ -111,7 +113,7 @@ export default function Home() {
                     Loving, Family-Like Care
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    We treat every child like our own. Our caregivers build genuine relationships 
+                    We treat every child with love and respect. Our caregivers build genuine relationships 
                     with the children, creating a warm environment where they feel safe, loved, 
                     and truly at home.
                   </p>
@@ -134,9 +136,9 @@ export default function Home() {
                     Safe & Secure Facility
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Your child's safety comes first. We have trained staff, secure entry systems, 
-                    child-proofed spaces, and constant supervision to ensure peace of mind for 
-                    every parent.
+                    Your child's safety comes first. We maintain a secured, serene environment 
+                    with trained caregivers, attentive supervision, and security support to give 
+                    parents peace of mind.
                   </p>
                 </div>
               </motion.div>
@@ -152,21 +154,21 @@ export default function Home() {
                 <div className="border-l-3 border-brand-green/30 pl-4">
                   <h3 className="text-lg font-bold text-foreground mb-1 flex items-center gap-2">
                     <BookOpen className="h-5 w-5 text-brand-green/70" />
-                    Montessori-Inspired Learning
+                    Learning Through Play
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    Children learn through play, exploration, and hands-on activities that 
-                    encourage creativity and independence.
+                    Children learn through play, Montessori-inspired activities, exploration, 
+                    and hands-on discovery that encourage creativity and independence.
                   </p>
                 </div>
                 <div className="border-l-3 border-brand-orange/30 pl-4">
                   <h3 className="text-lg font-bold text-foreground mb-1 flex items-center gap-2">
                     <Users className="h-5 w-5 text-brand-orange/70" />
-                    Partnership with Parents
+                    Partnership with Families
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    We work closely with families, sharing daily updates and welcoming your 
-                    input to nurture each child's unique potential.
+                    We work closely with families, sharing updates and welcoming your input 
+                    so every child's unique development is supported.
                   </p>
                 </div>
               </motion.div>
@@ -188,7 +190,7 @@ export default function Home() {
               <div className="relative rounded-2xl overflow-hidden border border-secondary">
                 <img
                   src={aboutImage}
-                  alt="Reading time at Genhart Daycare"
+                  alt="Caregiver guiding children through play-based learning at Genhart Daycare"
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -204,14 +206,14 @@ export default function Home() {
                 Where Every Child <span className="text-brand-green">Blossoms</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                We believe that every child deserves a safe, loving, and nurturing environment—
+                We believe that every child deserves a safe, loving, and nurturing environment -
                 a true home away from home. Our daycare is designed to be a warm, family-like 
                 space where children explore, play, and grow with confidence and curiosity.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Located in Benin City, we've been serving families since 2018, building trust 
-                through genuine care, open communication, and a deep commitment to each child's 
-                wellbeing.
+                Located in Benin City, we support toddlers and preschoolers with a clean, 
+                hygienic environment, well trained caregivers, and daily routines that help 
+                children feel secure and inspired to learn.
               </p>
               <div className="pt-1">
                 <Button variant="default" size="lg" asChild>
@@ -255,7 +257,7 @@ export default function Home() {
                   <p className="text-muted-foreground leading-relaxed mb-3 italic">
                     "{testimonial.text}"
                   </p>
-                  <p className="font-semibold text-foreground text-sm">— {testimonial.name}</p>
+                  <p className="font-semibold text-foreground text-sm">- {testimonial.name}</p>
                 </motion.div>
               ))}
             </div>
