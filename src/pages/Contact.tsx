@@ -18,9 +18,21 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const message = [
+      "Hello Genhart Daycare Centre,",
+      "",
+      `My name is ${formData.name}.`,
+      `Email: ${formData.email}`,
+      `Phone: ${formData.phone}`,
+      "",
+      formData.message,
+    ].join("\n");
+
+    window.open(`https://wa.me/2348034957056?text=${encodeURIComponent(message)}`, "_blank");
+
     toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you soon!",
+      title: "Opening WhatsApp",
+      description: "Your message has been prepared for Genhart Daycare Centre.",
     });
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
@@ -38,7 +50,10 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-3xl mx-auto"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-5 leading-tight">
+            <p className="text-sm font-extrabold uppercase tracking-wide text-brand-orange mb-3">
+              Visit, call, or WhatsApp
+            </p>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-foreground mb-5 leading-tight">
               Get in Touch
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -59,7 +74,7 @@ export default function Contact() {
               className="space-y-8"
             >
               <div>
-                <h2 className="text-3xl font-bold text-foreground mb-4">Contact Information</h2>
+                <h2 className="text-3xl font-extrabold text-foreground mb-4">Contact Information</h2>
                 <p className="text-muted-foreground leading-relaxed">
                   Reach us by phone, WhatsApp, or visit us in person. We're happy to answer
                   questions, discuss our programmes, or show you around.
@@ -127,10 +142,10 @@ export default function Contact() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="bg-card/50 border border-border p-6 rounded-2xl">
-                <h2 className="text-2xl font-bold text-foreground mb-2">Send Us a Message</h2>
+              <div className="bg-card/50 border border-border p-6 rounded-2xl shadow-soft">
+                <h2 className="text-2xl font-extrabold text-foreground mb-2">Send Us a Message</h2>
                 <p className="text-muted-foreground text-sm mb-6">
-                  Fill out the form below and we'll get back to you soon.
+                  Fill out the form below and we'll prepare it as a WhatsApp message for a faster response.
                 </p>
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div>
@@ -215,19 +230,19 @@ export default function Contact() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="text-3xl font-bold text-foreground mb-3">Visit Us</h2>
+            <h2 className="text-3xl font-extrabold text-foreground mb-3">Visit Us</h2>
             <p className="text-muted-foreground mb-6 leading-relaxed">
               We're located at No. 7, Irumekha Street in Benin City. Parents are welcome to visit
               during operating hours - no appointment needed.
             </p>
             <Button variant="default" size="lg" asChild>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=No.%207%2C%20Irumekha%20Street%2C%20Benin%20City%2C%20Edo%20State%2C%20Nigeria"
+                href="https://www.google.com/maps/dir/?api=1&destination=6.3330586%2C5.6221058"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <MapPin className="h-5 w-5" />
-                Get Directions to No. 7, Irumekha Street
+                Get Directions
               </a>
             </Button>
           </motion.div>
@@ -242,7 +257,7 @@ export default function Contact() {
             viewport={{ once: true }}
             className="max-w-2xl mx-auto text-center space-y-5"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-primary-foreground">
               Ready to Visit?
             </h2>
             <p className="text-primary-foreground/90 text-lg leading-relaxed">

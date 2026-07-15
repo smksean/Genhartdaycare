@@ -3,7 +3,7 @@ import { CheckCircle, Eye, Heart, Lock, Shield, Sparkles, Users } from "lucide-r
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import safetyImage from "@/assets/safety-care.jpg";
+import safetyImage from "@/assets/homepage-learning-care.png";
 
 const safetyChecklist = [
   "Secured, serene environment for daily care and learning",
@@ -30,7 +30,7 @@ export default function Safety() {
               <Shield className="inline h-4 w-4 mr-1" />
               Safety & Care
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-5 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-foreground mb-5 leading-tight">
               A Safe, Serene Place for Little Hearts
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -50,7 +50,7 @@ export default function Safety() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="relative rounded-3xl overflow-hidden shadow-card">
+              <div className="relative overflow-hidden rounded-[1.5rem] border-4 border-brand-green/20 shadow-card">
                 <img
                   src={safetyImage}
                   alt="Safe environment at Genhart Daycare"
@@ -65,7 +65,10 @@ export default function Safety() {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              <p className="text-sm font-extrabold uppercase tracking-wide text-brand-red">
+                Safety policies
+              </p>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
                 Care That Gives Parents Peace of Mind
               </h2>
               <p className="text-muted-foreground">
@@ -81,6 +84,13 @@ export default function Safety() {
                 We also value open communication with families, because safety is strongest when
                 parents and caregivers work together.
               </p>
+              <div className="rounded-2xl border border-brand-green/20 bg-brand-green/5 p-5">
+                <p className="font-extrabold text-foreground mb-1">Official safety policy</p>
+                <p className="text-muted-foreground">
+                  Genhart Daycare Centre maintains a secured, serene environment for children,
+                  caregivers, parents, and visitors.
+                </p>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -94,7 +104,7 @@ export default function Safety() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-3">
               How We Keep Children Safe Every Day
             </h2>
             <p className="text-muted-foreground text-lg mb-12">
@@ -181,7 +191,7 @@ export default function Safety() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-2">
               Safety Standards Parents Can See
             </h2>
             <p className="text-muted-foreground mb-8">
@@ -216,7 +226,7 @@ export default function Safety() {
             className="max-w-3xl mx-auto"
           >
             <Heart className="h-12 w-12 text-brand-red/70 mb-5" />
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4">
               Our Promise to You
             </h2>
             <p className="text-lg text-muted-foreground mb-5 leading-relaxed">
@@ -239,7 +249,7 @@ export default function Safety() {
             viewport={{ once: true }}
             className="max-w-2xl mx-auto text-center space-y-5"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-primary-foreground">
               Come See for Yourself
             </h2>
             <p className="text-primary-foreground/90 text-lg leading-relaxed">

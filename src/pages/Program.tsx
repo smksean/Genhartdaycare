@@ -32,7 +32,10 @@ export default function Program() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-3xl mx-auto"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-5 leading-tight">
+            <p className="text-sm font-extrabold uppercase tracking-wide text-brand-green mb-3">
+              Age groups & programmes
+            </p>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-foreground mb-5 leading-tight">
               Our Programmes for Toddlers & Preschoolers
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -41,6 +44,39 @@ export default function Program() {
               helping children grow with confidence, curiosity, and joy.
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid gap-5 md:grid-cols-2 max-w-5xl mx-auto">
+            {[
+              {
+                title: "Toddler Class",
+                ages: "9 months - 3 years",
+                text: "Focus on sensory exploration, routine building, language development, and social-emotional support.",
+                color: "border-brand-red/30 bg-brand-red/5",
+              },
+              {
+                title: "Preschool Class",
+                ages: "3 - 5 years",
+                text: "Montessori-inspired learning, early literacy, numeracy foundations, practical life activities, and play-based development.",
+                color: "border-brand-green/30 bg-brand-green/5",
+              },
+            ].map((item) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 14 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className={`rounded-2xl border p-6 ${item.color}`}
+              >
+                <p className="text-sm font-bold text-muted-foreground mb-2">{item.ages}</p>
+                <h2 className="text-2xl font-extrabold text-foreground mb-3">{item.title}</h2>
+                <p className="text-muted-foreground leading-relaxed">{item.text}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -55,7 +91,7 @@ export default function Program() {
             >
               <div className="flex items-center gap-2">
                 <Baby className="h-6 w-6 text-brand-red/70" />
-                <h2 className="text-3xl font-bold text-foreground">Toddler Class</h2>
+                <h2 className="text-3xl font-extrabold text-foreground">Toddler Class</h2>
               </div>
               <p className="text-lg text-brand-red/90 font-medium">Ages 9 months - 3 years</p>
               <p className="text-muted-foreground leading-relaxed">
@@ -81,7 +117,7 @@ export default function Program() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="relative rounded-2xl overflow-hidden border border-secondary">
+              <div className="relative overflow-hidden rounded-[1.5rem] border-4 border-brand-yellow/25 shadow-card">
                 <img
                   src={toddlerImage}
                   alt="Caregiver reading with toddlers at Genhart Daycare"
@@ -102,7 +138,7 @@ export default function Program() {
               viewport={{ once: true }}
               className="order-2 lg:order-1"
             >
-              <div className="relative rounded-2xl overflow-hidden border border-secondary">
+              <div className="relative overflow-hidden rounded-[1.5rem] border-4 border-white shadow-card">
                 <img
                   src={preschoolImage}
                   alt="Preschool children building with blocks at Genhart Daycare"
@@ -119,7 +155,7 @@ export default function Program() {
             >
               <div className="flex items-center gap-2">
                 <Sparkles className="h-6 w-6 text-brand-green/70" />
-                <h2 className="text-3xl font-bold text-foreground">Preschool Class</h2>
+                <h2 className="text-3xl font-extrabold text-foreground">Preschool Class</h2>
               </div>
               <p className="text-lg text-brand-green/90 font-medium">Ages 3 - 5 years</p>
               <p className="text-muted-foreground leading-relaxed">
@@ -151,7 +187,10 @@ export default function Program() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+            <p className="text-sm font-extrabold uppercase tracking-wide text-brand-blue mb-3">
+              Daily rhythm
+            </p>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-3">
               What Children Do Each Day
             </h2>
             <p className="text-muted-foreground mb-10 leading-relaxed">
@@ -231,7 +270,7 @@ export default function Program() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-3">
               A Typical Day
             </h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
