@@ -19,14 +19,22 @@ export const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-      <div className="container mx-auto flex h-20 items-center justify-between px-4">
+      <div className="container mx-auto flex h-24 items-center justify-between px-4">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 py-2">
-          <img src={logo} alt="Genhart Daycare" className="h-16 w-auto object-contain" />
+        <Link to="/" className="flex items-center gap-3 py-2">
+          <img src={logo} alt="Genhart Daycare" className="h-16 md:h-20 w-auto object-contain" />
+          <div className="hidden sm:block leading-tight">
+            <p className="text-lg md:text-xl font-extrabold text-foreground">
+              Genhart Daycare Centre
+            </p>
+            <p className="text-xs md:text-sm font-semibold text-brand-green">
+              A Home Away From Home
+            </p>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.path}
